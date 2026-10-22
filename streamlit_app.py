@@ -3,6 +3,7 @@
 import streamlit as st
 
 
+
 # Write directly to the app
 st.title(f":cup_with_straw: Customize your Smoothie :cup_with_straw: ")
 st.write(
@@ -12,6 +13,8 @@ st.write(
 )
 
 from snowflake.snowpark.functions import col
+cnx = st.connection ("Snowflake")
+session = cnx.session()
 
 name_on_order = st.text_input("Name on Smoothie :")
 st.write("The name on your smoothie will be : ", name_on_order)
@@ -51,5 +54,4 @@ if ingredients_list:
     #st.success('Your Smoothie is ordered {name_on_order} !', icon="✅")
     st.success(f"Your smoothie is ordered {name_on_order}!", icon="✅")
 
-cnx = st.connection ("Snowflake")
-session = cnx.session()
+
