@@ -13,7 +13,7 @@ st.write(
 )
 
 from snowflake.snowpark.functions import col
-cnx = st.connection ("Snowflake")
+cnx = st.connection ("snowflake")
 session = cnx.session()
 
 name_on_order = st.text_input("Name on Smoothie :")
