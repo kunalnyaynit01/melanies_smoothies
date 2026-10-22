@@ -67,6 +67,4 @@ sf_df = st.dataframe(data=smoothiefroot_respose.json() ) ,
                      use container_width=True
 
 sf_df = st.dataframe(
-    data=pd.DataFrame(smoothiefruit_response.json()),
-    use_container_width=True
-)
+ data=pd.DataFrame(smoothiefruit_response.json()), use_container_width=True)
